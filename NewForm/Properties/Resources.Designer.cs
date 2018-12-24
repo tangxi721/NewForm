@@ -47,7 +47,7 @@ namespace NewForm.Properties {
         }
         
         /// <summary>
-        ///   使用此强类型资源类，为所有资源查找
+        ///   重写当前线程的 CurrentUICulture 属性
         ///   重写当前线程的 CurrentUICulture 属性。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -63,9 +63,9 @@ namespace NewForm.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap timg__9_ {
+        internal static System.Drawing.Bitmap close {
             get {
-                object obj = ResourceManager.GetObject("timg (9)", resourceCulture);
+                object obj = ResourceManager.GetObject("close", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace NewForm.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap timg__9_1 {
+        internal static System.Drawing.Bitmap closeRed {
             get {
-                object obj = ResourceManager.GetObject("timg (9)1", resourceCulture);
+                object obj = ResourceManager.GetObject("closeRed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace NewForm.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 减 {
+        internal static System.Drawing.Bitmap maxForm {
             get {
-                object obj = ResourceManager.GetObject("减", resourceCulture);
+                object obj = ResourceManager.GetObject("maxForm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace NewForm.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 复选框__2_ {
+        internal static System.Drawing.Bitmap min {
             get {
-                object obj = ResourceManager.GetObject("复选框 (2)", resourceCulture);
+                object obj = ResourceManager.GetObject("min", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,39 +103,9 @@ namespace NewForm.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 小屏幕 {
+        internal static System.Drawing.Bitmap minFrom {
             get {
-                object obj = ResourceManager.GetObject("小屏幕", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 屏幕缩小 {
-            get {
-                object obj = ResourceManager.GetObject("屏幕缩小", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 开关 {
-            get {
-                object obj = ResourceManager.GetObject("开关", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 缩小屏幕 {
-            get {
-                object obj = ResourceManager.GetObject("缩小屏幕", resourceCulture);
+                object obj = ResourceManager.GetObject("minFrom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

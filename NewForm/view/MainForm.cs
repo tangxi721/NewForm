@@ -7,42 +7,76 @@ namespace NewForm
 {
     public partial class MainForm : Form
     {
-        # region 字段及属性
+        # region 字段及属性,enum
 
         private const int WM_NCLBUTTONDBLCLK = 163;
         private const int WM_NCHITTEST = 132;
         private const int HTCLIENT = 0x1;
         private const int HTCAPTION = 0x2;
         bool formMove = false;
-        Point formPoint;
+        Point formPoint ;
+
+        private enum FormMove
+        {
+            MouseDown,
+            MouseMove,
+            MouseUp
+        }
         #endregion
 
         #region 构造函数
 
         public MainForm()
         {
-            InitializeComponent();          
-            this.BackColor = Color.FromArgb(0, 60, 108);
-            this.DoubleBuffered = true;
-            SetStyle(ControlStyles.UserPaint, true);
-            SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            SetStyle(ControlStyles.DoubleBuffer, true);
+            InitializeComponent();            
+            InitializeParam();
         }
         #endregion
 
-        #region 基本功能事件
-
-        private void NewForm_Resize(object sender, EventArgs e)
-        {
-            //SetWindowRegion();
+        private void InitializeParam()
+        {                
         }
-  
+
+        #region 窗体移动，关闭，缩小，放大
         private void MiniMizeBox_MouseHover(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
         private void MaxMizeBox_MouseHover(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                string fullName = Application.StartupPath.Substring(0, Application.StartupPath.LastIndexOf("\\bin"));
+                MaxMizeBox.BackgroundImage = Image.FromFile(fullName + @"\Resources\maxForm.png");
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                string fullName = Application.StartupPath.Substring(0, Application.StartupPath.LastIndexOf("\\bin"));
+                MaxMizeBox.BackgroundImage = Image.FromFile(fullName + @"\Resources\minFrom.png");
+            }
+        }
+
+        private void CloseBox_MouseHover(object sender, EventArgs e)
+        {          
+            this.Close();
+        }
+
+        private void CloseBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            string fullName = Application.StartupPath.Substring(0, Application.StartupPath.LastIndexOf("\\bin"));
+            CloseBox.BackgroundImage = Image.FromFile(fullName + @"\Resources\closeRed.png");
+        }
+
+        private void CloseBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            string fullName = Application.StartupPath.Substring(0, Application.StartupPath.LastIndexOf("\\bin"));
+            CloseBox.BackgroundImage = Image.FromFile(fullName + @"\Resources\close.png");
+        }
+
+        private void TitletableLayoutPanel_DoubleClick(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
             {
@@ -54,89 +88,56 @@ namespace NewForm
             }
         }
 
-        private void CloseBox_MouseHover(object sender, EventArgs e)
-        {          
-            this.Close();
+        private void TitletableLayoutPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            MoveForm(FormMove.MouseDown.ToString(), e);
         }
 
-        private void TitlePanel_MouseDown_1(object sender, MouseEventArgs e)
+        private void TitletableLayoutPanel_MouseMove(object sender, MouseEventArgs e)
         {
-            formPoint = new Point();
-            int xOffset;
-            int yOffset;
-            if (e.Button == MouseButtons.Left)
+            MoveForm(FormMove.MouseMove.ToString(), e);
+        }
+
+        private void TitletableLayoutPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            MoveForm(FormMove.MouseUp.ToString(), e);
+        }  
+
+        private void MoveForm(string mouseAction, MouseEventArgs e)
+        {
+            if (mouseAction == FormMove.MouseDown.ToString())
             {
-                xOffset = -e.X;
-                yOffset = -e.Y;
-                formPoint = new Point(xOffset, yOffset);
-                formMove = true;
+                formPoint = new Point();
+                int xOffset;
+                int yOffset;
+                if (e.Button == MouseButtons.Left)
+                {
+                    xOffset = -e.X;
+                    yOffset = -e.Y;
+                    formPoint = new Point(xOffset, yOffset);
+                    formMove = true;
+                }
             }
-        }
-
-        private void TitlePanel_MouseMove_1(object sender, MouseEventArgs e)
-        {
-            if (formMove == true)
+            else if (mouseAction == FormMove.MouseMove.ToString())
             {
-                Point mousePos = Control.MousePosition;
-                mousePos.Offset(formPoint.X, formPoint.Y);
-                Location = mousePos;
+                if (formMove == true)
+                {
+                    Point mousePos = Control.MousePosition;
+                    mousePos.Offset(formPoint.X, formPoint.Y);
+                    Location = mousePos;
+                }            
             }
-        }
-
-        private void TitlePanel_MouseUp_1(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
+            else if (mouseAction == FormMove.MouseUp.ToString())
             {
-                formMove = false;
-            }
-        }
-
-        private void CloseBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            string fullName = Application.StartupPath.Substring(0, Application.StartupPath.LastIndexOf("\\bin"));
-            CloseBox.BackgroundImage = Image.FromFile(fullName + @"\Resources\关机红.png");
-        }
-
-        private void CloseBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            string fullName = Application.StartupPath.Substring(0, Application.StartupPath.LastIndexOf("\\bin"));
-            CloseBox.BackgroundImage = Image.FromFile(fullName + @"\Resources\开关.png");
+                if (e.Button == MouseButtons.Left)
+                {
+                    formMove = false;
+                }
+            }    
         }
         #endregion
 
-        # region 重绘窗体，擦出背景闪烁
-
-        public void SetWindowRegion()
-        {
-            GraphicsPath FormPath;
-            FormPath = new GraphicsPath();
-            Rectangle rect = new Rectangle(0, 0, this.Width, this.Height);
-            FormPath = GetRoundedRectPath(rect, 10);
-            this.Region = new Region(FormPath);
-        }
-
-
-        private GraphicsPath GetRoundedRectPath(Rectangle rect, int radius)
-        {
-            int diameter = radius;
-            Rectangle arcRect = new Rectangle(rect.Location, new Size(diameter, diameter));
-            GraphicsPath path = new GraphicsPath();
-            // 左上角  
-            path.AddArc(arcRect, 180, 90);
-            // 右上角  
-            arcRect.X = rect.Right - diameter;
-            path.AddArc(arcRect, 270, 90);
-            // 右下角  
-            arcRect.Y = rect.Bottom - diameter;
-            path.AddArc(arcRect, 0, 90);
-            // 左下角  
-            arcRect.X = rect.Left;
-            path.AddArc(arcRect, 90, 90);
-            path.CloseFigure();//闭合曲线  
-            return path;
-        }      
-                               
-        // 边框改变大小      
+        #region 窗体拉伸放大与缩小
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)
@@ -154,9 +155,9 @@ namespace NewForm
                     //if (lpint.Y < 30)
                     //    m.Result = (IntPtr)0x2;//托动HTCAPTION=2 <0x2>
                     if (WindowState != FormWindowState.Maximized)
-                    {                      
+                    {
                         Point p2 = this.PointToClient(MousePosition);//鼠标相对于窗体的坐标
-                       
+
                         //label1.Text = p2.X + "," + p2.Y;
                         //HTLEFT=10 <0xA> 左边框                      
                         if (p2.X < 5 && p2.Y > 5 && p2.Y < this.Height - 5)
@@ -182,40 +183,14 @@ namespace NewForm
                         else if (p2.X > this.Width - 5 && p2.Y >= this.Height - 5)
                             m.Result = (IntPtr)0x11;
                         if ((int)m.Result == HTCLIENT)
-                            m.Result = (IntPtr)HTCAPTION;                        
+                            m.Result = (IntPtr)HTCAPTION;
                     }
-                    return;              
+                    return;
                 default:
                     base.WndProc(ref m);
                     return;
             }
         }
-     
-        // 重载基类的背景擦除函数，解决窗口刷新，放大，图像闪烁      
-        protected override void OnPaintBackground(PaintEventArgs e)
-        {          
-            return;
-        }
-
-        // 重载基类的OnPaint事件，使用双缓冲，背景重绘移动到拉伸位置       
-        protected override void OnPaint(PaintEventArgs e)
-        {           
-            this.DoubleBuffered = true;           
-            if (this.BackgroundImage != null)
-            {
-                e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
-                e.Graphics.DrawImage(
-                    this.BackgroundImage,
-                    new Rectangle(0, 0, this.Width, this.Height),
-                    0,
-                    0,
-                    this.BackgroundImage.Width,
-                    this.BackgroundImage.Height,
-                    GraphicsUnit.Pixel);
-            }
-            base.OnPaint(e);
-        }
-
         #endregion      
 
 
@@ -253,5 +228,7 @@ namespace NewForm
             userControl2 = new UserControl2();
             userControl3 = new UserControl3();
         }
+
+       
     }
 }

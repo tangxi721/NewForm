@@ -40,7 +40,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::NewForm.Properties.Resources.timg__9_;
+       
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.checkBox2);
             this.panel1.Controls.Add(this.checkBox1);

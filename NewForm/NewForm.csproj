@@ -54,6 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SqlHelper.cs" />
     <Compile Include="view\BaseForm.cs">
       <SubType>Form</SubType>
@@ -119,11 +124,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -136,32 +136,28 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\减.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\复选框 %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\开关.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\timg %289%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\龙猫.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\缩小屏幕.png" />
-    <None Include="Resources\小屏幕.png" />
-    <None Include="Resources\屏幕缩小.png" />
-    <None Include="Resources\timg %289%291.jpg" />
-    <Content Include="Resources\关机红.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="mode\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minFrom.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
