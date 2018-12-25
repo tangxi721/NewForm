@@ -195,38 +195,10 @@ namespace NewForm
 
 
 
-        private UserControl1 userControl1;
-        private UserControl2 userControl2;
-        private UserControl3 userControl3;
-        private void button1_Click(object sender, EventArgs e)
-        {
-            userControl1.Show();
-            userControl1.Dock=DockStyle.Fill;
-            panel2.Controls.Clear();
-            panel2.Controls.Add(userControl1);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            userControl2.Show();
-            userControl2.Dock = DockStyle.Fill;
-            panel2.Controls.Clear();
-            panel2.Controls.Add(userControl2);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            userControl3.Show();
-            userControl3.Dock = DockStyle.Fill;
-            panel2.Controls.Clear();
-            panel2.Controls.Add(userControl3);
-        }
+       
 
         private void NewForm_Load(object sender, EventArgs e)
-        {
-            userControl1 = new UserControl1();
-            userControl2 = new UserControl2();
-            userControl3 = new UserControl3();
+        {     
         }
 
        
