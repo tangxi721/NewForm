@@ -23,19 +23,25 @@ namespace NewForm
             MouseUp
         }
         #endregion
-
-        #region 构造函数
+       
+        #region 初始化
 
         public MainForm()
         {
             InitializeComponent();            
             InitializeParam();
         }
-        #endregion
+
+        private void NewForm_Load(object sender, EventArgs e)
+        {
+            
+        }
 
         private void InitializeParam()
-        {                
+        {
+
         }
+        #endregion
 
         #region 窗体移动，关闭，缩小，放大
         private void MiniMizeBox_MouseHover(object sender, EventArgs e)
@@ -192,15 +198,7 @@ namespace NewForm
             }
         }
         #endregion      
+    
 
-
-
-       
-
-        private void NewForm_Load(object sender, EventArgs e)
-        {     
-        }
-
-       
     }
 }

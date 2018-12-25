@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.skinSplitContainer1 = new CCWin.SkinControl.SkinSplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TitlePanel = new CCWin.SkinControl.SkinPanel();
@@ -36,10 +40,14 @@
             this.searchtextBox = new System.Windows.Forms.TextBox();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.Allpanel = new System.Windows.Forms.Panel();
+            this.mynotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.MiniMizeBox = new System.Windows.Forms.PictureBox();
             this.MaxMizeBox = new System.Windows.Forms.PictureBox();
             this.CloseBox = new System.Windows.Forms.PictureBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer1)).BeginInit();
+            this.skinSplitContainer1.Panel1.SuspendLayout();
             this.skinSplitContainer1.Panel2.SuspendLayout();
             this.skinSplitContainer1.SuspendLayout();
             this.TitlePanel.SuspendLayout();
@@ -63,6 +71,7 @@
             // skinSplitContainer1.Panel1
             // 
             this.skinSplitContainer1.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.skinSplitContainer1.Panel1.Controls.Add(this.listView1);
             this.skinSplitContainer1.Panel1.Font = new System.Drawing.Font("幼圆", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             // 
             // skinSplitContainer1.Panel2
@@ -179,6 +188,12 @@
             this.Allpanel.Size = new System.Drawing.Size(786, 539);
             this.Allpanel.TabIndex = 18;
             // 
+            // mynotifyIcon
+            // 
+            this.mynotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("mynotifyIcon.Icon")));
+            this.mynotifyIcon.Text = "notifyIcon1";
+            this.mynotifyIcon.Visible = true;
+            // 
             // MiniMizeBox
             // 
             this.MiniMizeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -220,6 +235,23 @@
             this.CloseBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CloseBox_MouseDown);
             this.CloseBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CloseBox_MouseUp);
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            listViewGroup2.Header = "ListViewGroup";
+            listViewGroup2.Name = "listViewGroup1";
+            this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup2});
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem2});
+            this.listView1.Location = new System.Drawing.Point(-62, 109);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(56, 141);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.List;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -232,9 +264,11 @@
             this.Controls.Add(this.TitlePanel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(108)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(861, 587);
             this.Name = "MainForm";
             this.Load += new System.EventHandler(this.NewForm_Load);
+            this.skinSplitContainer1.Panel1.ResumeLayout(false);
             this.skinSplitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer1)).EndInit();
             this.skinSplitContainer1.ResumeLayout(false);
@@ -262,6 +296,9 @@
         private System.Windows.Forms.Panel searchpanel;
         private System.Windows.Forms.TextBox searchtextBox;
         private System.Windows.Forms.TableLayoutPanel TitletableLayoutPanel;
+        private System.Windows.Forms.NotifyIcon mynotifyIcon;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
 
