@@ -34,11 +34,11 @@
   <ItemGroup>
     <Reference Include="CSkin, Version=16.1.14.2, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\CSkin.dll</HintPath>
+      <HintPath>..\DLLS\CSkin.dll</HintPath>
     </Reference>
     <Reference Include="MyControlLibirary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\MyControlLibirary.dll</HintPath>
+      <HintPath>..\DLLS\MyControlLibirary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
