@@ -34,12 +34,14 @@ namespace NewForm
 
         private void NewForm_Load(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void InitializeParam()
         {
-
+            this.StartPosition= FormStartPosition.CenterScreen;
+            VDpanel.BackColor = Color.FromArgb(255,0, 70, 108);
+            //lcpanel1.BackColor = Color.Red;
         }
         #endregion
 
@@ -80,6 +82,18 @@ namespace NewForm
         {
             string fullName = Application.StartupPath.Substring(0, Application.StartupPath.LastIndexOf("\\bin"));
             CloseBox.BackgroundImage = Image.FromFile(fullName + @"\Resources\close.png");
+        } 
+
+        private void searchpictureBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            string fullName = Application.StartupPath.Substring(0, Application.StartupPath.LastIndexOf("\\bin"));
+            searchpictureBox.BackgroundImage = Image.FromFile(fullName + @"\Resources\search.png");
+        }
+
+        private void searchpictureBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            string fullName = Application.StartupPath.Substring(0, Application.StartupPath.LastIndexOf("\\bin"));
+            searchpictureBox.BackgroundImage = Image.FromFile(fullName + @"\Resources\w_search.png");
         }
 
         private void TitletableLayoutPanel_DoubleClick(object sender, EventArgs e)
@@ -148,24 +162,18 @@ namespace NewForm
         {
             switch (m.Msg)
             {
-                case WM_NCLBUTTONDBLCLK://WM_NCLBUTTONDBLCLK=163 <0xA3>拦截鼠标非客户区左键双击消息,决定窗体是否最大化显示
+                case WM_NCLBUTTONDBLCLK:
                     if (this.MaximizeBox)
                     {
                         base.WndProc(ref m);
                         this.Invalidate();
                     }
                     return;
-                case WM_NCHITTEST://WM_NCHITTEST=132 <0x84> 
-                    base.WndProc(ref m);//如果去掉这一行代码,窗体将失去MouseMove..等事件
-                    //Point lpint = new Point((int)m.LParam);//可以得到鼠标坐标,这样就可以决定怎么处理这个消息了,是移动窗体,还是缩放,以及向哪向的缩放
-                    //if (lpint.Y < 30)
-                    //    m.Result = (IntPtr)0x2;//托动HTCAPTION=2 <0x2>
+                case WM_NCHITTEST:
+                    base.WndProc(ref m);   
                     if (WindowState != FormWindowState.Maximized)
                     {
-                        Point p2 = this.PointToClient(MousePosition);//鼠标相对于窗体的坐标
-
-                        //label1.Text = p2.X + "," + p2.Y;
-                        //HTLEFT=10 <0xA> 左边框                      
+                        Point p2 = this.PointToClient(MousePosition);                
                         if (p2.X < 5 && p2.Y > 5 && p2.Y < this.Height - 5)
                             m.Result = (IntPtr)0xA;
                         else if (p2.Y < 5 && p2.X > 5 && p2.X < this.Width - 5)
@@ -197,8 +205,7 @@ namespace NewForm
                     return;
             }
         }
-        #endregion      
-    
-
+        #endregion
+ 
     }
 }

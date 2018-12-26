@@ -175,5 +175,20 @@
   <ItemGroup>
     <None Include="Resources\bitbug_favicon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ST.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

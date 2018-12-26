@@ -126,28 +126,33 @@
   <metadata name="TitlePanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="searchpanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="searchpictureBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAdZJREFUSEvN
+        lDFLHUEURl+0SmMgkYhExcpKJWAjBMTgP7AxaRQEFS2UgGBhY5PSNEkt4h9IkV4kRUAxEpGoWGonkQQL
+        UcRcz535ViRvd91VkRw4xfvmu7NvfeNU/hvMrAHHcBR7sFFLd4ONanAK1zCNnziANRopB4NN+A0T/uI2
+        ruA6nmHCLnZptBgMdOAvn4ZDnMPnWg7w+TFO4G90/mC7lvOhWIs/fAo28ImWUmG9Efe8DJv4SEvZUBoM
+        9fgmDYpzodeCyRuNKM6G0mrs2qSiQtAfj2O2pygdCv53vghVs2eKC0G/DpPZp4qrYbE9duxAUSmY24nj
+        1q2oGhZfxs4Nr5wBc9/juPUqqobF5tixM0WlYM6PsdOmKB0KySl5ragQ9DvjmB1jreJ0KHwKVbMvigpB
+        fzGO2YKibCi14mmom/UrzoXe21i3E2xSnA/FmTBido5vFKfCeq96zpTiYjCwFOcCfr0MY72WryD76AU4
+        wvzf4l8Y8Gv+A16/ba8zq56fyORUzYfhsjD4At/jV0x+K7/236ninT5M/tsHFN8/bD4dnxG+SLEr/zaw
+        +efwGLN9zL6/7gIb+wW75U+BZcX3D5v7QfCT5pS6yUvB5q9wSB8fikrlEu/WcFl8XvCzAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
   <metadata name="searchpanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="searchtextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="searchtextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="skinPanel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Allpanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="LEFTpanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="mynotifyIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="mynotifyIcon.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAABILAAASCwAAAAAAAAAA
