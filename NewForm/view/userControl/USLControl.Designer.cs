@@ -38,63 +38,73 @@
             // 
             // USpanel
             // 
+            this.USpanel.BackColor = System.Drawing.Color.White;
             this.USpanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.USpanel.Location = new System.Drawing.Point(0, 0);
             this.USpanel.Margin = new System.Windows.Forms.Padding(0);
             this.USpanel.Name = "USpanel";
-            this.USpanel.Size = new System.Drawing.Size(13, 150);
+            this.USpanel.Size = new System.Drawing.Size(5, 188);
             this.USpanel.TabIndex = 0;
+            this.USpanel.Visible = false;
+            this.USpanel.Click += new System.EventHandler(this.USpanel_Click);
             // 
             // UStableLayoutPanel
             // 
             this.UStableLayoutPanel.ColumnCount = 3;
             this.UStableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.UStableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.UStableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.UStableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.UStableLayoutPanel.Controls.Add(this.USpictureBox, 1, 1);
             this.UStableLayoutPanel.Controls.Add(this.USlabel, 1, 2);
             this.UStableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UStableLayoutPanel.Location = new System.Drawing.Point(13, 0);
+            this.UStableLayoutPanel.Location = new System.Drawing.Point(5, 0);
             this.UStableLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.UStableLayoutPanel.Name = "UStableLayoutPanel";
             this.UStableLayoutPanel.RowCount = 4;
             this.UStableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.UStableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.UStableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.UStableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.UStableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.UStableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.UStableLayoutPanel.Size = new System.Drawing.Size(184, 150);
+            this.UStableLayoutPanel.Size = new System.Drawing.Size(258, 188);
             this.UStableLayoutPanel.TabIndex = 1;
+            this.UStableLayoutPanel.Click += new System.EventHandler(this.UStableLayoutPanel_Click);
             // 
             // USpictureBox
             // 
+            this.USpictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.USpictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.USpictureBox.Location = new System.Drawing.Point(77, 50);
+            this.USpictureBox.Location = new System.Drawing.Point(109, 62);
             this.USpictureBox.Margin = new System.Windows.Forms.Padding(0);
             this.USpictureBox.Name = "USpictureBox";
-            this.USpictureBox.Size = new System.Drawing.Size(30, 30);
+            this.USpictureBox.Size = new System.Drawing.Size(40, 38);
             this.USpictureBox.TabIndex = 0;
             this.USpictureBox.TabStop = false;
+            this.USpictureBox.Click += new System.EventHandler(this.USpictureBox_Click);
             // 
             // USlabel
             // 
             this.USlabel.AutoSize = true;
             this.USlabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.USlabel.Font = new System.Drawing.Font("微软雅黑", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.USlabel.Location = new System.Drawing.Point(77, 80);
+            this.USlabel.ForeColor = System.Drawing.Color.White;
+            this.USlabel.Location = new System.Drawing.Point(109, 100);
             this.USlabel.Margin = new System.Windows.Forms.Padding(0);
             this.USlabel.Name = "USlabel";
-            this.USlabel.Size = new System.Drawing.Size(30, 20);
+            this.USlabel.Size = new System.Drawing.Size(40, 25);
             this.USlabel.TabIndex = 1;
             this.USlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.USlabel.Click += new System.EventHandler(this.USlabel_Click);
             // 
             // USLControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.UStableLayoutPanel);
             this.Controls.Add(this.USpanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "USLControl";
-            this.Size = new System.Drawing.Size(197, 150);
+            this.Size = new System.Drawing.Size(263, 188);
             this.UStableLayoutPanel.ResumeLayout(false);
             this.UStableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.USpictureBox)).EndInit();

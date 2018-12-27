@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewForm.view.userControl;
+using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -39,9 +40,7 @@ namespace NewForm
 
         private void InitializeParam()
         {
-            this.StartPosition= FormStartPosition.CenterScreen;
-            VDpanel.BackColor = Color.FromArgb(255,0, 70, 108);
-            //lcpanel1.BackColor = Color.Red;
+            this.StartPosition= FormStartPosition.CenterScreen;   
         }
         #endregion
 
@@ -206,6 +205,44 @@ namespace NewForm
             }
         }
         #endregion
- 
+
+        private void VDuslControl_Click(object sender, EventArgs e)
+        {        
+            VDuslControl.SetActive = true;
+            VDuslControl.IsActive = true;
+            VDuslControl.SetBackColor = Color.FromArgb(0, 60, 108);
+            foreach (Control control in LEFTtableLayoutPanel.Controls)
+            {
+                if (control is USLControl && !control.Equals(VDuslControl))
+                {
+                    USLControl uSLControl = (USLControl)control;
+                    if (uSLControl.IsActive == true)
+                    {
+                        uSLControl.SetActive = false;
+                        uSLControl.IsActive = false;
+                        uSLControl.SetBackColor = Color.FromArgb(27, 45, 83);
+                    }
+                }
+            }
+        }
+
+        private void STuslControl_Click(object sender, EventArgs e)
+        {
+            STuslControl.IsActive = true;
+            STuslControl.SetBackColor = Color.FromArgb(0, 60, 108);
+            foreach (Control control in LEFTtableLayoutPanel.Controls)
+            {
+                if (control is USLControl && !control.Equals(STuslControl))
+                {
+                    USLControl uSLControl = (USLControl)control;
+                    if (uSLControl.IsActive == true)
+                    {
+                        uSLControl.SetActive = false;
+                        uSLControl.IsActive = false;
+                        uSLControl.SetBackColor = Color.FromArgb(27, 45, 83);
+                    }
+                }
+            }
+        }
     }
 }

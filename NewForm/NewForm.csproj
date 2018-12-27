@@ -153,7 +153,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="mode\" />
+    <Folder Include="util\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.png" />
