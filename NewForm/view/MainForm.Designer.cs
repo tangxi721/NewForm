@@ -34,45 +34,45 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.VDtableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.VDlabel = new System.Windows.Forms.Label();
+            this.VDpictureBox = new System.Windows.Forms.PictureBox();
             this.TitlePanel = new CCWin.SkinControl.SkinPanel();
             this.TitletableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.searchpictureBox = new System.Windows.Forms.PictureBox();
+            this.MiniMizeBox = new System.Windows.Forms.PictureBox();
             this.searchpanel = new System.Windows.Forms.Panel();
             this.searchtextBox = new System.Windows.Forms.TextBox();
+            this.MaxMizeBox = new System.Windows.Forms.PictureBox();
+            this.CloseBox = new System.Windows.Forms.PictureBox();
             this.LEFTpanel = new CCWin.SkinControl.SkinPanel();
             this.LEFTtableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.STpanel = new System.Windows.Forms.Panel();
             this.STtableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.STlabel = new System.Windows.Forms.Label();
+            this.STpictureBox = new System.Windows.Forms.PictureBox();
             this.STLpanel = new System.Windows.Forms.Panel();
             this.VDpanel = new System.Windows.Forms.Panel();
             this.VDLpanel = new System.Windows.Forms.Panel();
             this.Allpanel = new System.Windows.Forms.Panel();
             this.mynotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.STpictureBox = new System.Windows.Forms.PictureBox();
-            this.VDpictureBox = new System.Windows.Forms.PictureBox();
-            this.searchpictureBox = new System.Windows.Forms.PictureBox();
-            this.MiniMizeBox = new System.Windows.Forms.PictureBox();
-            this.MaxMizeBox = new System.Windows.Forms.PictureBox();
-            this.CloseBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer1)).BeginInit();
             this.skinSplitContainer1.Panel2.SuspendLayout();
             this.skinSplitContainer1.SuspendLayout();
             this.VDtableLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VDpictureBox)).BeginInit();
             this.TitlePanel.SuspendLayout();
             this.TitletableLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchpictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiniMizeBox)).BeginInit();
             this.searchpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxMizeBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseBox)).BeginInit();
             this.LEFTpanel.SuspendLayout();
             this.LEFTtableLayoutPanel.SuspendLayout();
             this.STpanel.SuspendLayout();
             this.STtableLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.STpictureBox)).BeginInit();
             this.VDpanel.SuspendLayout();
             this.Allpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.STpictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VDpictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchpictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MiniMizeBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxMizeBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseBox)).BeginInit();
             this.SuspendLayout();
             // 
             // skinSplitContainer1
@@ -94,7 +94,7 @@
             this.skinSplitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.skinSplitContainer1.Panel2.Controls.Add(this.panel2);
             this.skinSplitContainer1.Size = new System.Drawing.Size(795, 539);
-            this.skinSplitContainer1.SplitterDistance = 139;
+            this.skinSplitContainer1.SplitterDistance = 207;
             this.skinSplitContainer1.SplitterWidth = 8;
             this.skinSplitContainer1.TabIndex = 17;
             // 
@@ -105,7 +105,7 @@
             this.panel2.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(648, 539);
+            this.panel2.Size = new System.Drawing.Size(580, 539);
             this.panel2.TabIndex = 1;
             // 
             // VDtableLayoutPanel
@@ -141,6 +141,18 @@
             this.VDlabel.TabIndex = 0;
             this.VDlabel.Text = "视频";
             this.VDlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // VDpictureBox
+            // 
+            this.VDpictureBox.BackgroundImage = global::NewForm.Properties.Resources.VD;
+            this.VDpictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.VDpictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.VDpictureBox.Location = new System.Drawing.Point(15, 5);
+            this.VDpictureBox.Margin = new System.Windows.Forms.Padding(0);
+            this.VDpictureBox.Name = "VDpictureBox";
+            this.VDpictureBox.Size = new System.Drawing.Size(30, 30);
+            this.VDpictureBox.TabIndex = 0;
+            this.VDpictureBox.TabStop = false;
             // 
             // TitlePanel
             // 
@@ -189,6 +201,33 @@
             this.TitletableLayoutPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitletableLayoutPanel_MouseMove);
             this.TitletableLayoutPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TitletableLayoutPanel_MouseUp);
             // 
+            // searchpictureBox
+            // 
+            this.searchpictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.searchpictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchpictureBox.BackgroundImage")));
+            this.searchpictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.searchpictureBox.Location = new System.Drawing.Point(562, 11);
+            this.searchpictureBox.Margin = new System.Windows.Forms.Padding(0);
+            this.searchpictureBox.Name = "searchpictureBox";
+            this.searchpictureBox.Size = new System.Drawing.Size(26, 24);
+            this.searchpictureBox.TabIndex = 0;
+            this.searchpictureBox.TabStop = false;
+            this.searchpictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.searchpictureBox_MouseDown);
+            this.searchpictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.searchpictureBox_MouseUp);
+            // 
+            // MiniMizeBox
+            // 
+            this.MiniMizeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MiniMizeBox.BackColor = System.Drawing.Color.Transparent;
+            this.MiniMizeBox.BackgroundImage = global::NewForm.Properties.Resources.min;
+            this.MiniMizeBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MiniMizeBox.Location = new System.Drawing.Point(773, 11);
+            this.MiniMizeBox.Name = "MiniMizeBox";
+            this.MiniMizeBox.Size = new System.Drawing.Size(19, 20);
+            this.MiniMizeBox.TabIndex = 8;
+            this.MiniMizeBox.TabStop = false;
+            this.MiniMizeBox.Click += new System.EventHandler(this.MiniMizeBox_MouseHover);
+            // 
             // searchpanel
             // 
             this.searchpanel.BackColor = System.Drawing.Color.White;
@@ -213,6 +252,34 @@
             this.searchtextBox.Size = new System.Drawing.Size(283, 22);
             this.searchtextBox.TabIndex = 0;
             this.searchtextBox.TabStop = false;
+            // 
+            // MaxMizeBox
+            // 
+            this.MaxMizeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MaxMizeBox.BackColor = System.Drawing.Color.Transparent;
+            this.MaxMizeBox.BackgroundImage = global::NewForm.Properties.Resources.maxForm;
+            this.MaxMizeBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.MaxMizeBox.ImageLocation = "";
+            this.MaxMizeBox.Location = new System.Drawing.Point(803, 11);
+            this.MaxMizeBox.Name = "MaxMizeBox";
+            this.MaxMizeBox.Size = new System.Drawing.Size(19, 20);
+            this.MaxMizeBox.TabIndex = 9;
+            this.MaxMizeBox.TabStop = false;
+            this.MaxMizeBox.Click += new System.EventHandler(this.MaxMizeBox_MouseHover);
+            // 
+            // CloseBox
+            // 
+            this.CloseBox.BackColor = System.Drawing.Color.Transparent;
+            this.CloseBox.BackgroundImage = global::NewForm.Properties.Resources.close;
+            this.CloseBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CloseBox.Location = new System.Drawing.Point(833, 11);
+            this.CloseBox.Name = "CloseBox";
+            this.CloseBox.Size = new System.Drawing.Size(19, 20);
+            this.CloseBox.TabIndex = 10;
+            this.CloseBox.TabStop = false;
+            this.CloseBox.Click += new System.EventHandler(this.CloseBox_MouseHover);
+            this.CloseBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CloseBox_MouseDown);
+            this.CloseBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CloseBox_MouseUp);
             // 
             // LEFTpanel
             // 
@@ -294,6 +361,18 @@
             this.STlabel.Text = "设置";
             this.STlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // STpictureBox
+            // 
+            this.STpictureBox.BackgroundImage = global::NewForm.Properties.Resources.ST;
+            this.STpictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.STpictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.STpictureBox.Location = new System.Drawing.Point(15, 5);
+            this.STpictureBox.Margin = new System.Windows.Forms.Padding(0);
+            this.STpictureBox.Name = "STpictureBox";
+            this.STpictureBox.Size = new System.Drawing.Size(30, 30);
+            this.STpictureBox.TabIndex = 0;
+            this.STpictureBox.TabStop = false;
+            // 
             // STLpanel
             // 
             this.STLpanel.BackColor = System.Drawing.Color.White;
@@ -343,85 +422,6 @@
             this.mynotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("mynotifyIcon.Icon")));
             this.mynotifyIcon.Visible = true;
             // 
-            // STpictureBox
-            // 
-            this.STpictureBox.BackgroundImage = global::NewForm.Properties.Resources.ST;
-            this.STpictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.STpictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.STpictureBox.Location = new System.Drawing.Point(15, 5);
-            this.STpictureBox.Margin = new System.Windows.Forms.Padding(0);
-            this.STpictureBox.Name = "STpictureBox";
-            this.STpictureBox.Size = new System.Drawing.Size(30, 30);
-            this.STpictureBox.TabIndex = 0;
-            this.STpictureBox.TabStop = false;
-            // 
-            // VDpictureBox
-            // 
-            this.VDpictureBox.BackgroundImage = global::NewForm.Properties.Resources.VD;
-            this.VDpictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.VDpictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.VDpictureBox.Location = new System.Drawing.Point(15, 5);
-            this.VDpictureBox.Margin = new System.Windows.Forms.Padding(0);
-            this.VDpictureBox.Name = "VDpictureBox";
-            this.VDpictureBox.Size = new System.Drawing.Size(30, 30);
-            this.VDpictureBox.TabIndex = 0;
-            this.VDpictureBox.TabStop = false;
-            // 
-            // searchpictureBox
-            // 
-            this.searchpictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.searchpictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchpictureBox.BackgroundImage")));
-            this.searchpictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.searchpictureBox.Location = new System.Drawing.Point(562, 11);
-            this.searchpictureBox.Margin = new System.Windows.Forms.Padding(0);
-            this.searchpictureBox.Name = "searchpictureBox";
-            this.searchpictureBox.Size = new System.Drawing.Size(26, 24);
-            this.searchpictureBox.TabIndex = 0;
-            this.searchpictureBox.TabStop = false;
-            this.searchpictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.searchpictureBox_MouseDown);
-            this.searchpictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.searchpictureBox_MouseUp);
-            // 
-            // MiniMizeBox
-            // 
-            this.MiniMizeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MiniMizeBox.BackColor = System.Drawing.Color.Transparent;
-            this.MiniMizeBox.BackgroundImage = global::NewForm.Properties.Resources.min;
-            this.MiniMizeBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MiniMizeBox.Location = new System.Drawing.Point(773, 11);
-            this.MiniMizeBox.Name = "MiniMizeBox";
-            this.MiniMizeBox.Size = new System.Drawing.Size(19, 20);
-            this.MiniMizeBox.TabIndex = 8;
-            this.MiniMizeBox.TabStop = false;
-            this.MiniMizeBox.Click += new System.EventHandler(this.MiniMizeBox_MouseHover);
-            // 
-            // MaxMizeBox
-            // 
-            this.MaxMizeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MaxMizeBox.BackColor = System.Drawing.Color.Transparent;
-            this.MaxMizeBox.BackgroundImage = global::NewForm.Properties.Resources.maxForm;
-            this.MaxMizeBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.MaxMizeBox.ImageLocation = "";
-            this.MaxMizeBox.Location = new System.Drawing.Point(803, 11);
-            this.MaxMizeBox.Name = "MaxMizeBox";
-            this.MaxMizeBox.Size = new System.Drawing.Size(19, 20);
-            this.MaxMizeBox.TabIndex = 9;
-            this.MaxMizeBox.TabStop = false;
-            this.MaxMizeBox.Click += new System.EventHandler(this.MaxMizeBox_MouseHover);
-            // 
-            // CloseBox
-            // 
-            this.CloseBox.BackColor = System.Drawing.Color.Transparent;
-            this.CloseBox.BackgroundImage = global::NewForm.Properties.Resources.close;
-            this.CloseBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CloseBox.Location = new System.Drawing.Point(833, 11);
-            this.CloseBox.Name = "CloseBox";
-            this.CloseBox.Size = new System.Drawing.Size(19, 20);
-            this.CloseBox.TabIndex = 10;
-            this.CloseBox.TabStop = false;
-            this.CloseBox.Click += new System.EventHandler(this.CloseBox_MouseHover);
-            this.CloseBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CloseBox_MouseDown);
-            this.CloseBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CloseBox_MouseUp);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -443,23 +443,23 @@
             this.skinSplitContainer1.ResumeLayout(false);
             this.VDtableLayoutPanel.ResumeLayout(false);
             this.VDtableLayoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VDpictureBox)).EndInit();
             this.TitlePanel.ResumeLayout(false);
             this.TitletableLayoutPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.searchpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiniMizeBox)).EndInit();
             this.searchpanel.ResumeLayout(false);
             this.searchpanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxMizeBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseBox)).EndInit();
             this.LEFTpanel.ResumeLayout(false);
             this.LEFTtableLayoutPanel.ResumeLayout(false);
             this.STpanel.ResumeLayout(false);
             this.STtableLayoutPanel.ResumeLayout(false);
             this.STtableLayoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.STpictureBox)).EndInit();
             this.VDpanel.ResumeLayout(false);
             this.Allpanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.STpictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VDpictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchpictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MiniMizeBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxMizeBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseBox)).EndInit();
             this.ResumeLayout(false);
 
         }
