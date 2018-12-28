@@ -13,7 +13,7 @@ namespace NewForm.view.userControl
     public partial class USLControl : UserControl
     {
         public bool IsActive { get; set; }
-        public bool SetActive { get => USpanel.Visible; set => USpanel.Visible = value; }
+        public Color SetActive { get => USpanel.BackColor; set => USpanel.BackColor = value; }
         public Color SetBackColor { get => this.BackColor; set => this.BackColor = value; }
 
         public USLControl()

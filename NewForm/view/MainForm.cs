@@ -35,7 +35,7 @@ namespace NewForm
 
         private void NewForm_Load(object sender, EventArgs e)
         {
-           
+            AllSplitContainer.SplitterDistance = 0;
         }
 
         private void InitializeParam()
@@ -206,43 +206,54 @@ namespace NewForm
         }
         #endregion
 
+        #region 左侧菜单栏事件
         private void VDuslControl_Click(object sender, EventArgs e)
-        {        
-            VDuslControl.SetActive = true;
-            VDuslControl.IsActive = true;
-            VDuslControl.SetBackColor = Color.FromArgb(0, 60, 108);
-            foreach (Control control in LEFTtableLayoutPanel.Controls)
-            {
-                if (control is USLControl && !control.Equals(VDuslControl))
-                {
-                    USLControl uSLControl = (USLControl)control;
-                    if (uSLControl.IsActive == true)
-                    {
-                        uSLControl.SetActive = false;
-                        uSLControl.IsActive = false;
-                        uSLControl.SetBackColor = Color.FromArgb(27, 45, 83);
-                    }
-                }
-            }
+        {
+            SetMenuActive(VDuslControl, false);
         }
 
         private void STuslControl_Click(object sender, EventArgs e)
         {
-            STuslControl.IsActive = true;
-            STuslControl.SetBackColor = Color.FromArgb(0, 60, 108);
+            SetMenuActive(STuslControl, true);
+        }
+
+        private void BKuslControl_Click(object sender, EventArgs e)
+        {
+            SetMenuActive(BKuslControl, false);
+        }
+
+        private void MSuslControl_Click(object sender, EventArgs e)
+        {
+            SetMenuActive(MSuslControl, false);
+        }
+
+        private void SetMenuActive(USLControl uSLControl, bool isST)
+        {
+            uSLControl.IsActive = true;
+            uSLControl.SetBackColor = Color.FromArgb(0, 60, 108);
+            if (isST == true)
+            {
+                uSLControl.SetActive = Color.FromArgb(0, 60, 108);
+            }
+            else
+            {
+                uSLControl.SetActive = Color.White;
+            }
+
             foreach (Control control in LEFTtableLayoutPanel.Controls)
             {
-                if (control is USLControl && !control.Equals(STuslControl))
+                if (control is USLControl && !control.Equals(uSLControl))
                 {
-                    USLControl uSLControl = (USLControl)control;
-                    if (uSLControl.IsActive == true)
+                    USLControl uslControl = (USLControl)control;
+                    if (uslControl.IsActive == true)
                     {
-                        uSLControl.SetActive = false;
-                        uSLControl.IsActive = false;
-                        uSLControl.SetBackColor = Color.FromArgb(27, 45, 83);
+                        uslControl.SetActive = LEFTpanel.BackColor;
+                        uslControl.IsActive = false;
+                        uslControl.SetBackColor = LEFTpanel.BackColor;
                     }
                 }
             }
         }
+        #endregion  
     }
 }
