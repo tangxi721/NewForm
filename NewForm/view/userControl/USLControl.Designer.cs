@@ -46,6 +46,8 @@
             this.USpanel.Size = new System.Drawing.Size(4, 150);
             this.USpanel.TabIndex = 0;
             this.USpanel.Click += new System.EventHandler(this.USpanel_Click);
+            this.USpanel.MouseEnter += new System.EventHandler(this.USpanel_MouseEnter);
+            this.USpanel.MouseLeave += new System.EventHandler(this.USpanel_MouseLeave);
             // 
             // UStableLayoutPanel
             // 
@@ -67,6 +69,8 @@
             this.UStableLayoutPanel.Size = new System.Drawing.Size(193, 150);
             this.UStableLayoutPanel.TabIndex = 1;
             this.UStableLayoutPanel.Click += new System.EventHandler(this.UStableLayoutPanel_Click);
+            this.UStableLayoutPanel.MouseEnter += new System.EventHandler(this.UStableLayoutPanel_MouseEnter);
+            this.UStableLayoutPanel.MouseLeave += new System.EventHandler(this.UStableLayoutPanel_MouseLeave);
             // 
             // USpictureBox
             // 
@@ -79,6 +83,8 @@
             this.USpictureBox.TabIndex = 0;
             this.USpictureBox.TabStop = false;
             this.USpictureBox.Click += new System.EventHandler(this.USpictureBox_Click);
+            this.USpictureBox.MouseEnter += new System.EventHandler(this.USpictureBox_MouseEnter);
+            this.USpictureBox.MouseLeave += new System.EventHandler(this.USpictureBox_MouseLeave);
             // 
             // USlabel
             // 
@@ -93,6 +99,8 @@
             this.USlabel.TabIndex = 1;
             this.USlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.USlabel.Click += new System.EventHandler(this.USlabel_Click);
+            this.USlabel.MouseEnter += new System.EventHandler(this.USlabel_MouseEnter);
+            this.USlabel.MouseLeave += new System.EventHandler(this.USlabel_MouseLeave);
             // 
             // USLControl
             // 
@@ -101,7 +109,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.UStableLayoutPanel);
             this.Controls.Add(this.USpanel);
-            this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "USLControl";
             this.Size = new System.Drawing.Size(197, 150);
             this.UStableLayoutPanel.ResumeLayout(false);

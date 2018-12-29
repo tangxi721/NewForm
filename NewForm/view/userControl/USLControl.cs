@@ -64,5 +64,45 @@ namespace NewForm.view.userControl
         {
             base.OnClick(e);
         }
+
+        private void UStableLayoutPanel_MouseEnter(object sender, EventArgs e)
+        {
+            base.OnMouseEnter(e);
+        }
+
+        private void USpictureBox_MouseEnter(object sender, EventArgs e)
+        {
+            base.OnMouseEnter(e);
+        }
+
+        private void USlabel_MouseEnter(object sender, EventArgs e)
+        {
+            base.OnMouseEnter(e);
+        }
+
+        private void USpanel_MouseEnter(object sender, EventArgs e)
+        {
+            base.OnMouseEnter(e);
+        }
+
+        private void UStableLayoutPanel_MouseLeave(object sender, EventArgs e)
+        {
+            base.OnMouseLeave(e);
+        }
+
+        private void USpictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            base.OnMouseLeave(e);
+        }
+
+        private void USlabel_MouseLeave(object sender, EventArgs e)
+        {
+            base.OnMouseLeave(e);
+        }
+
+        private void USpanel_MouseLeave(object sender, EventArgs e)
+        {
+            base.OnMouseLeave(e);
+        }
     }
 }

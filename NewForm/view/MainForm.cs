@@ -35,7 +35,7 @@ namespace NewForm
 
         private void NewForm_Load(object sender, EventArgs e)
         {
-            AllSplitContainer.SplitterDistance = 0;
+            AllSplitContainer.SplitterDistance = Allpanel.Width/2-20;
         }
 
         private void InitializeParam()
@@ -70,19 +70,7 @@ namespace NewForm
         {          
             this.Close();
         }
-
-        private void CloseBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            string fullName = Application.StartupPath.Substring(0, Application.StartupPath.LastIndexOf("\\bin"));
-            CloseBox.BackgroundImage = Image.FromFile(fullName + @"\Resources\closeRed.png");
-        }
-
-        private void CloseBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            string fullName = Application.StartupPath.Substring(0, Application.StartupPath.LastIndexOf("\\bin"));
-            CloseBox.BackgroundImage = Image.FromFile(fullName + @"\Resources\close.png");
-        } 
-
+      
         private void searchpictureBox_MouseDown(object sender, MouseEventArgs e)
         {
             string fullName = Application.StartupPath.Substring(0, Application.StartupPath.LastIndexOf("\\bin"));
@@ -153,6 +141,36 @@ namespace NewForm
                     formMove = false;
                 }
             }    
+        }
+
+        private void ClosetableLayoutPanel_MouseEnter(object sender, EventArgs e)
+        {
+            Closepanel.BackColor = Color.Red;
+        }
+
+        private void ClosetableLayoutPanel_MouseLeave(object sender, EventArgs e)
+        {
+            Closepanel.BackColor = Color.FromArgb(27, 45, 83);
+        }
+
+        private void MinitableLayoutPanel_MouseEnter(object sender, EventArgs e)
+        {
+            Minipanel.BackColor = Color.FromArgb(0, 60, 108);
+        }
+
+        private void MinitableLayoutPanel_MouseLeave(object sender, EventArgs e)
+        {
+            Minipanel.BackColor = Color.FromArgb(27, 45, 83);
+        }
+
+        private void MaxMitableLayoutPanel_MouseEnter(object sender, EventArgs e)
+        {
+            MaxMipanel.BackColor = Color.FromArgb(0, 60, 108);
+        }
+
+        private void MaxMitableLayoutPanel_MouseLeave(object sender, EventArgs e)
+        {
+            MaxMipanel.BackColor = Color.FromArgb(27, 45, 83);
         }
         #endregion
 
@@ -254,6 +272,72 @@ namespace NewForm
                 }
             }
         }
-        #endregion  
+
+        private void VDuslControl_MouseEnter(object sender, EventArgs e)
+        {
+            SetMenuHover(VDuslControl, true);
+        }
+
+        private void VDuslControl_MouseLeave(object sender, EventArgs e)
+        {
+            SetMenuHover(VDuslControl, false);
+        }
+
+        private void MSuslControl_MouseEnter(object sender, EventArgs e)
+        {
+            SetMenuHover(MSuslControl, true);
+        }
+
+        private void MSuslControl_MouseLeave(object sender, EventArgs e)
+        {
+            SetMenuHover(MSuslControl, false);
+        }
+
+        private void BKuslControl_MouseEnter(object sender, EventArgs e)
+        {
+            SetMenuHover(BKuslControl, true);
+        }
+
+        private void BKuslControl_MouseLeave(object sender, EventArgs e)
+        {
+            SetMenuHover(BKuslControl, false);
+        }
+
+        private void STuslControl_MouseEnter(object sender, EventArgs e)
+        {
+            SetMenuHover(STuslControl, true);
+        }
+
+        private void STuslControl_MouseLeave(object sender, EventArgs e)
+        {
+            SetMenuHover(STuslControl, false);
+        }
+
+        private void SetMenuHover(USLControl uSLControl, bool isEnter)
+        {
+            if (uSLControl.IsActive != true)
+            {
+                if (isEnter == true)
+                {
+                    uSLControl.BackColor = Color.FromArgb(0, 60, 108);
+                    uSLControl.SetActive = Color.FromArgb(0, 60, 108);
+                }
+                else
+                {
+                    uSLControl.BackColor = LEFTpanel.BackColor;
+                    uSLControl.SetActive = LEFTpanel.BackColor;
+                }
+            }
+        }
+        #endregion
+
+
+
+
+
+
+
+
+
     }
 }
