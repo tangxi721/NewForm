@@ -36,6 +36,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLS\CSkin.dll</HintPath>
     </Reference>
+    <Reference Include="MonoTorrent">
+      <HintPath>E:\MyDownloads\c#\monotorrent-master\monotorrent-master\build\MonoTorrent\Debug\MonoTorrent.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoTorrent.Dht">
+      <HintPath>E:\MyDownloads\c#\monotorrent-master\monotorrent-master\build\MonoTorrent\Debug\MonoTorrent.Dht.dll</HintPath>
+    </Reference>
     <Reference Include="MyControlLibirary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLS\MyControlLibirary.dll</HintPath>

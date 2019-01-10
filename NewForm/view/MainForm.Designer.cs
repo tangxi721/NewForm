@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.AllSplitContainer = new CCWin.SkinControl.SkinSplitContainer();
+            this.ALpanel = new System.Windows.Forms.Panel();
             this.ARpanel = new System.Windows.Forms.Panel();
             this.TitlePanel = new CCWin.SkinControl.SkinPanel();
             this.TitletableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -55,7 +56,6 @@
             this.BKuslControl = new NewForm.view.userControl.USLControl();
             this.Allpanel = new System.Windows.Forms.Panel();
             this.mynotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.ALpanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.AllSplitContainer)).BeginInit();
             this.AllSplitContainer.Panel1.SuspendLayout();
             this.AllSplitContainer.Panel2.SuspendLayout();
@@ -104,6 +104,15 @@
             this.AllSplitContainer.SplitterDistance = 207;
             this.AllSplitContainer.SplitterWidth = 8;
             this.AllSplitContainer.TabIndex = 17;
+            // 
+            // ALpanel
+            // 
+            this.ALpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ALpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ALpanel.Location = new System.Drawing.Point(0, 0);
+            this.ALpanel.Name = "ALpanel";
+            this.ALpanel.Size = new System.Drawing.Size(207, 539);
+            this.ALpanel.TabIndex = 0;
             // 
             // ARpanel
             // 
@@ -336,6 +345,7 @@
             this.searchpictureBox.Size = new System.Drawing.Size(28, 30);
             this.searchpictureBox.TabIndex = 0;
             this.searchpictureBox.TabStop = false;
+            this.searchpictureBox.Click += new System.EventHandler(this.searchpictureBox_Click);
             this.searchpictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.searchpictureBox_MouseDown);
             this.searchpictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.searchpictureBox_MouseUp);
             // 
@@ -480,15 +490,6 @@
             // 
             this.mynotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("mynotifyIcon.Icon")));
             this.mynotifyIcon.Visible = true;
-            // 
-            // ALpanel
-            // 
-            this.ALpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ALpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ALpanel.Location = new System.Drawing.Point(0, 0);
-            this.ALpanel.Name = "ALpanel";
-            this.ALpanel.Size = new System.Drawing.Size(207, 539);
-            this.ALpanel.TabIndex = 0;
             // 
             // MainForm
             // 

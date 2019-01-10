@@ -3,6 +3,16 @@ using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using MonoTorrent.BEncoding;
+using MonoTorrent.Common;
+using MonoTorrent.Client;
+using MonoTorrent.Client.Encryption;
+using MonoTorrent.Client.Tracker;
+using MonoTorrent.Dht;
+using MonoTorrent.Dht.Listeners;
+using MonoTorrent;
+using System.IO;
+using System.Net;
 
 namespace NewForm
 {
@@ -35,7 +45,7 @@ namespace NewForm
 
         private void NewForm_Load(object sender, EventArgs e)
         {
-            AllSplitContainer.SplitterDistance = Allpanel.Width/2-20;
+            AllSplitContainer.SplitterDistance = Allpanel.Width/2-20;       
         }
 
         private void InitializeParam()
@@ -281,6 +291,7 @@ namespace NewForm
         private void VDuslControl_MouseLeave(object sender, EventArgs e)
         {
             SetMenuHover(VDuslControl, false);
+            
         }
 
         private void MSuslControl_MouseEnter(object sender, EventArgs e)
@@ -329,15 +340,40 @@ namespace NewForm
                 }
             }
         }
+
+
+
+
+
+
+
+
         #endregion
 
+        private void searchpictureBox_Click(object sender, EventArgs e)
+        {
+            string magnet = searchtextBox.Text.ToString().Trim();
+            MagnetLink link = new MagnetLink(magnet);
+            EngineSettings settings = new EngineSettings
+            {
+                AllowedEncryption = EncryptionTypes.All,
+                SavePath = Path.Combine(Environment.CurrentDirectory, "Downloads")
+            };
 
+            string torrentFilePath = Path.Combine(Environment.CurrentDirectory, "TorrentFiles");
+            if (!Directory.Exists(settings.SavePath))
+                Directory.CreateDirectory(settings.SavePath);
 
+            if (!Directory.Exists(torrentFilePath))
+                Directory.CreateDirectory(torrentFilePath);
 
+            //Create a new engine, give it some settings and use it.
+            ClientEngine engine = new ClientEngine(settings);
+            engine.ChangeListenEndpoint(new IPEndPoint(IPAddress.Any, 6969));
 
-
-
-
-
+            TorrentManager manager = new TorrentManager(link, engine.Settings.SavePath, new TorrentSettings(), torrentFilePath);
+            engine.Register(manager);
+            manager.Start();
+        }
     }
 }
