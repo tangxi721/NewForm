@@ -37,10 +37,10 @@
       <HintPath>..\DLLS\CSkin.dll</HintPath>
     </Reference>
     <Reference Include="MonoTorrent">
-      <HintPath>E:\MyDownloads\c#\monotorrent-master\monotorrent-master\build\MonoTorrent\Debug\MonoTorrent.dll</HintPath>
+      <HintPath>..\DLLS\MonoTorrent.dll</HintPath>
     </Reference>
     <Reference Include="MonoTorrent.Dht">
-      <HintPath>E:\MyDownloads\c#\monotorrent-master\monotorrent-master\build\MonoTorrent\Debug\MonoTorrent.Dht.dll</HintPath>
+      <HintPath>..\DLLS\MonoTorrent.Dht.dll</HintPath>
     </Reference>
     <Reference Include="MyControlLibirary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -88,24 +88,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="view\userControl\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\userControl\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\userControl\UserControl2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\userControl\UserControl2.Designer.cs">
-      <DependentUpon>UserControl2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\userControl\UserControl3.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\userControl\UserControl3.Designer.cs">
-      <DependentUpon>UserControl3.cs</DependentUpon>
-    </Compile>
     <Compile Include="view\userControl\USLControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,15 +106,6 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\userControl\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\userControl\UserControl2.resx">
-      <DependentUpon>UserControl2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\userControl\UserControl3.resx">
-      <DependentUpon>UserControl3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\userControl\USLControl.resx">
       <DependentUpon>USLControl.cs</DependentUpon>

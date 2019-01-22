@@ -345,7 +345,6 @@
             this.searchpictureBox.Size = new System.Drawing.Size(28, 30);
             this.searchpictureBox.TabIndex = 0;
             this.searchpictureBox.TabStop = false;
-            this.searchpictureBox.Click += new System.EventHandler(this.searchpictureBox_Click);
             this.searchpictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.searchpictureBox_MouseDown);
             this.searchpictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.searchpictureBox_MouseUp);
             // 
